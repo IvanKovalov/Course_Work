@@ -1,4 +1,3 @@
-
 body{
 	font-family:"Segoe UI";
 	background-color:#202020;
@@ -13,8 +12,24 @@ body, .text_input {
   margin-left: (5rem );
 
 }
+body, .text_input1 {
+ 
+  justify-content:right;
+  align-items: center;
+  min-height: 10vh;
+  min-width: 70vh;
+  margin-left: (5rem );
+
+}
 
 body, .text_out {
+ 
+  justify-content:right;
+  align-items: center;
+  min-height: 10vh;
+  margin-top: calc(2rem);
+}
+body, .text_out1 {
  
   justify-content:right;
   align-items: center;
