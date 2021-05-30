@@ -1,5 +1,7 @@
 'use strict';
 
+const btn = document.getElementById("copyText");
+const uncopy = document.getElementById("uncopyText");
 const text_input = document.getElementById('text_input');
 const text_input1 = document.getElementById('text_input1');
 const text_out = document.getElementById('text_out');
@@ -51,7 +53,7 @@ const generatekey = () =>{//функия генерирования ключа
     let randomnum = 0;
     const side = randomInteger( 1, 10 );    
     for (let c = 0; c < side; c++){
-        randomnum = randomInteger(0,99);
+        randomnum = randomInteger(0, 99);
         key.push( randomnum );
 }
     const result1 = key.join('');
@@ -93,35 +95,38 @@ const codding = () => {//функция кодировки
                  } 
             }
         }
-        res = res.join('');
-        result.key.name = generatedkey;
-        result.key.cod = newalphabet;
-        result.coddingresult = res;
+    res = res.join('');
+    result.key.name = generatedkey;
+    result.key.cod = newalphabet;
+    result.coddingresult = res;
     characterSpan3.innerText = result.key.name;
-    text_outkey.appendChild( characterSpan3 );
+    text_outkey.appendChild(characterSpan3);
     characterSpan.innerText = result.coddingresult;
-    text_out.appendChild( characterSpan );
-
+    text_out.appendChild(characterSpan);
+    
     }
 
 //}
 
 //вывод зашифрован текста
 //const uncodding = (key1, text) =>{//функия раскодировки
-if ( rad[0].checked ){
-    let res1 = text_input1.value.split('');
-    for ( let i = 0; i < res1.length;i ++ ){
-        for ( const keys  of Object.keys( result.key.cod ) ){
-            if ( res1[i] == result.key.cod[keys] ){
-                res1[i] = keys;
+    if ( rad[0].checked ){
+        let res1 = text_input1.value.split('');
+        for ( let i = 0; i < res1.length;i ++ ){
+            for ( const keys  of Object.keys( result.key.cod ) ){
+                if ( res1[i] == result.key.cod[keys] ){
+                    res1[i] = keys;
+                }
             }
         }
+        res1 = res1.join('');
+        characterSpan2.innerText = res1;
+        text_unencrypt.appendChild(characterSpan2);
     }
-    res1 = res1.join('');
-    characterSpan2.innerText = res1;
-    text_unencrypt.appendChild(characterSpan2);
-   
 }
-}
+
+btn.onclick = function() {
+    navigator.clipboard.writeText(result.coddingresult);
+   }
 
 document.querySelector('button').onclick = codding;
