@@ -55,6 +55,14 @@ a{
 
 }
 
+#copyText {
+  padding: 6px 11px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #37c23e;
+  color: #efefef;
+}
+
 mark{
 	background-color:#FFA500;
 }
