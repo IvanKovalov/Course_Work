@@ -22,6 +22,16 @@ body, .text_input1 {
 
 }
 
+body, .key_input {
+ 
+  justify-content:right;
+  align-items: center;
+  min-height: 10vh;
+  min-width: 10vh;
+  margin-left: (5rem );
+
+}
+
 body, .text_out {
  
   justify-content:right;
@@ -42,12 +52,33 @@ body, .text_out1 {
   min-height: 5vh;
   min-width: 10vh;
   margin-left: calc(2rem + 2px);
+  background-color: #c73f16;
+  color: #efefef;
+}
+
+#copyText {
+  padding: 6px 11px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #37c23e;
+  color: #efefef;
+}
+
+#copyKey {
+  padding: 6px 11px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #37c23e;
+  color: #efefef;
 }
 
 h1,h3{
 	text-align:center;
 	color:#FFFFFF;
 	
+}
+h6 {
+	color:#FFFFFF;
 }
 
 a{
@@ -67,7 +98,7 @@ span{
 nav ul{
 	display:flex;
 	justify-content:space-around;
-	background-color: #252525;
+	background-color: #0f0f0f;
 	height: 40px;
 	padding-top:20px;
 	border-style: dotted;
