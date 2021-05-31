@@ -123,5 +123,5 @@ if ( rad[0].checked ){
    
 }
 }
-
+\\
 document.querySelector('button').onclick = codding;
